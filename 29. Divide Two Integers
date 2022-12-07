@@ -1,0 +1,33 @@
+class Solution {
+public:
+    int divide(int dividend, int divisor) {
+        int a=0;
+        if((dividend<0)&&(divisor>0)||(dividend>0)&&(divisor<0)){
+            divisor = abs(divisor);
+            dividend = abs(dividend);
+            while(1){
+                if(dividend>divisor){
+                    dividend=dividend-divisor;
+                    a--;
+                }
+                else{
+                    break;
+                }
+            }
+        }
+        else{
+            divisor = abs(divisor);
+            dividend = abs(dividend);
+            while(1){
+                if(dividend>divisor){
+                    dividend=dividend-divisor;
+                    a++;
+                }
+                else{
+                    break;
+                }
+            }
+        }
+        return a;
+    }
+};
