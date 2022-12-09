@@ -2,10 +2,10 @@ class Solution {
 public:
     bool isPalindrome(int x) {
         bool a;
-        int b = x;
-        int c = 0;
+        long b = long(x);
+        long c = 0;
         while(b!=0){
-            int m=b%10;
+            long m=b%10;
             c=c*10+m;
             b=b/10;
         }
@@ -18,4 +18,3 @@ public:
         return a;
     }
 };
-
