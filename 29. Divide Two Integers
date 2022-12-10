@@ -1,10 +1,19 @@
 class Solution {
 public:
-    int divide(int dividend, int divisor) {
-        int a=0;
-        if((dividend<0)&&(divisor>0)||(dividend>0)&&(divisor<0)){
+    int divide(int divid, int divis) {
+        long a=0;
+        long dividend = long(divid);
+        long divisor = long(divis);
+        if(dividend == divisor){
+            a++;
+        }
+        else if((dividend<0)&&(divisor>0)||(dividend>0)&&(divisor<0)){
             divisor = abs(divisor);
             dividend = abs(dividend);
+            if(dividend == divisor){
+                a = -1;
+                return a;
+            }
             while(1){
                 if(dividend>divisor){
                     dividend=dividend-divisor;
