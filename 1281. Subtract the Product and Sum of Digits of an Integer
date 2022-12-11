@@ -8,6 +8,6 @@ public:
             sum=sum+temp;
             pro=pro*temp;
         }
-        return abs(pro-sum);
+        return pro-sum;
     }
 };
